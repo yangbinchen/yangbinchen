@@ -1,31 +1,31 @@
-# ½â¾öcurl: (60) Peer's Certificate has expiredcurlÎÊÌâ
-## ÏÖÏó
-ÔÚÎÒµÄÒ»Ì¨ÔËĞĞChatGPT AcadmicµÄ·şÎñÆ÷ÖĞ£¬Ö´ĞĞÎÊÌâ²éÑ¯Ê±±¨´í£º
+# è§£å†³curl: (60) Peer's Certificate has expiredcurlé—®é¢˜
+## ç°è±¡
+åœ¨æˆ‘çš„ä¸€å°è¿è¡ŒChatGPT Acadmicçš„æœåŠ¡å™¨ä¸­ï¼Œæ‰§è¡Œé—®é¢˜æŸ¥è¯¢æ—¶æŠ¥é”™ï¼š
 ```bash
 [root@xxx ~]#
 curl(60) - "Peer's Certificate has expired."
 ```
 
-## ÎÊÌâ·ÖÎö
-²éÁËÒ»Í¨£¬ºóÃæ·¢ÏÖÊÇÏµÍ³µÄÊ±¼ä²»¶Ô¡£
+## é—®é¢˜åˆ†æ
+æŸ¥äº†ä¸€é€šï¼Œåé¢å‘ç°æ˜¯ç³»ç»Ÿçš„æ—¶é—´ä¸å¯¹ã€‚
 ```bash
-#²éÑ¯Ê±Çø
+#æŸ¥è¯¢æ—¶åŒº
 [root@xxx ~]# timedatectl status|grep 'Time zone'
        Time zone: Asia/Shanghai (CST, +0800)
-#²éÑ¯Ê±¼ä£¬·¢ÏÖÊ±¼äÊÇ1970Äê
+#æŸ¥è¯¢æ—¶é—´ï¼Œå‘ç°æ—¶é—´æ˜¯1970å¹´
 [root@xxx certs]# date
 Sun Oct 22 21:55:19 CST 1970
 
-#Í¬²½Ê±¼ä·şÎñÆ÷µÄÊ±¼ä
+#åŒæ­¥æ—¶é—´æœåŠ¡å™¨çš„æ—¶é—´
 [root@xxx ~]# ntpdate -u pool.ntp.org
 22 Oct 21:56:54 ntpdate[26724]: adjust time server 61.239.100.40 offset 0.000637 sec
 
-#²éÑ¯Ê±¼ä
+#æŸ¥è¯¢æ—¶é—´
 [root@xxx ~]# date
 Sun Oct 22 21:55:19 CST 2023
 
 ```
 
-## ÎÊÌâ½â¾ö
+## é—®é¢˜è§£å†³
 
-Í¬²½Ê±¼ä·şÎñÆ÷µÄÊ±¼ä£¬¾Í½â¾öÁËÎÊÌâ¡£
+åŒæ­¥æ—¶é—´æœåŠ¡å™¨çš„æ—¶é—´ï¼Œå°±è§£å†³äº†é—®é¢˜ã€‚
